@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css">
+  <title> my To-do list </title>
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1> To-Do List</h1>
+      <div class="wrapper">
+        <input type="text" placeholder=" Add New Task">
+        <i id="plus" class="fas fa-plus fa-lg"></i>
+      </div>
+
+
+      <ol spellcheck="false">
+        <li>
+          <span class="task"> Wash dog </span>
+          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"> </i> </span>
+          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
+          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"> </i> </span>
+        </li>
+
+        <li>
+          <span class="task"> Shopping </span>
+          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"></i> </span>
+          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
+          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"></i> </span>
+        </li>
+
+        <li>
+          <span class="task"> Feed cat </span>
+          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"></i> </span>
+          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
+          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"></i> </span>
+        </li>
+      </ol>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/verona-hub" target="_blank">
+      <img class="github" src="img/icon-github.svg" alt="github icon">
+    </a>
+  </footer>
+
+  <script src="jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
