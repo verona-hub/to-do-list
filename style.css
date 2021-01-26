@@ -99,6 +99,9 @@ li:nth-child(2n) {
 ██ ██      ██    ██ ██  ██ ██      ██
 ██  ██████  ██████  ██   ████ ███████
 */
+span.edit i::before {
+  padding: 20px 10px;
+}
 
 span.checked,
 span.edit,
@@ -115,13 +118,17 @@ span.checked {
   top: 1.5px;
 }
 
+span.edit,
+span.trash {
+  font-size: 1rem;
+}
+
 i.fa-square:hover,
 i.fa-check-square:hover {
   animation: heartbeat .5s;
-  animation-iteration-count: 2;
-  animation-timing-function: linear;
-  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
 }
 
 i.fa-pencil-alt:hover {
@@ -132,9 +139,9 @@ i.fa-pencil-alt:hover {
 
 i.fa-trash:hover {
   animation: rotate .6s;
+  animation-fill-mode: both;
   animation-iteration-count: 1;
   animation-timing-function: ease;
-  animation-fill-mode: both;
 }
 
 .completed {
@@ -157,7 +164,6 @@ i.fa-trash:hover {
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 */
-
 footer,
 .footer-wrapper {
   -webkit-box-align: center;
@@ -183,7 +189,6 @@ footer img {
 ██  ██  ██         ██    ██      ██   ██ ██   ██ ██  ██  ██ ██           ██
 ██   ██ ███████    ██    ██      ██   ██ ██   ██ ██      ██ ███████ ███████
 */
-
 @keyframes heartbeat {
   0% {
     transform: scale(1);
@@ -328,7 +333,6 @@ footer img {
 ██   ██ ██           ██ ██  ██     ██    ██    ██ ██
 ██████  ███████ ███████ ██   ██    ██     ██████  ██
 */
-
 @media screen and (min-width: 1301px) {
   .container {
     margin-top: 20vh;
@@ -346,7 +350,6 @@ footer img {
   span.checked,
   span.edit,
   span.trash {
-    font-size: 1rem;
     margin-right: 10px;
     opacity: 0;
     transition: 400ms ease-in;
@@ -379,9 +382,6 @@ footer img {
  ██     ██████       ██████       ██████      ██      ██   ██
 */
 @media screen and (max-width: 1300px) {
-  body {
-  }
-
   .container {
     margin: 0 10vw;
   }
@@ -414,7 +414,6 @@ footer img {
   span.checked,
   span.edit,
   span.trash {
-    font-size: 1.2rem;
     margin-right: 3vw;
   }
 }
@@ -463,10 +462,6 @@ footer img {
      ██        ██  ██████      ██      ██   ██
   */
 @media screen and (max-width: 740px) and (orientation: portrait) {
-  body {}
-
-  main {}
-
   h1 {
     font-size: 1.4rem;
     padding: 4vw;
@@ -485,22 +480,12 @@ footer img {
     font-size: 1rem;
   }
 
-  span.checked,
-  span.edit,
-  span.trash {
-    font-size: 1rem;
-    margin-right: 6vw;
-  }
-
   footer {
     margin: 15vh 0 2vh;
   }
 }
 
 @media screen and (max-width: 700px) and (orientation: landscape) {
-  body {
-  }
-
   .container {
     margin-top: 15vh;
   }
