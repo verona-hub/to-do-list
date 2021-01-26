@@ -21,7 +21,14 @@ $(document).ready(function() {
     if ($emptyInput.length !== 0) {
 
       // Append new task to the list
-      $('ol').append('<li>' + '<span class="task"> ' + todoText + '</span>' + '<span class="trash" contenteditable="false">   <i class="fas fa-trash fa-lg">      </i></span>' + '<span class="edit" contenteditable="false">    <i class="fas fa-pencil-alt fa-lg"> </i></span>' + '<span class="checked" contenteditable="false"> <i class="far fa-square fa-lg">     </i></span>' + '</li>');
+      $('ol').append('<li>' 
+      + '<span class="task"> ' 
+      + todoText 
+      + '</span>' 
+      + '<span class="trash" contenteditable="false">   <i class="fas fa-trash fa-lg">      </i></span>' 
+      + '<span class="edit" contenteditable="false">    <i class="fas fa-pencil-alt fa-lg"> </i></span>' 
+      + '<span class="checked" contenteditable="false"> <i class="far fa-square fa-lg">     </i></span>' 
+      + '</li>');
       // Clear the input after new task is inserted
       $('input').val('');
 
