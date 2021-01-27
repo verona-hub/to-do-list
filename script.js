@@ -21,14 +21,13 @@ $(document).ready(function() {
     if ($emptyInput.length !== 0) {
 
       // Append new task to the list
-      $('ol').append('<li>' 
-      + '<span class="task"> ' 
-      + todoText 
-      + '</span>' 
-      + '<span class="trash" contenteditable="false">   <i class="fas fa-trash fa-lg">      </i></span>' 
-      + '<span class="edit" contenteditable="false">    <i class="fas fa-pencil-alt fa-lg"> </i></span>' 
-      + '<span class="checked" contenteditable="false"> <i class="far fa-square fa-lg">     </i></span>' 
-      + '</li>');
+      $('ol').append(`
+    <li>
+      <span class="task"> ${todoText} </span> 
+      <span class="trash"   contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg">      </i></span>
+      <span class="edit"    contenteditable="false" title="Click to edit this task">                 <i class="fas fa-pencil-alt fa-lg"> </i></span>
+      <span class="checked" contenteditable="false" title="Click to mark this task as completed">    <i class="far fa-square fa-lg">     </i></span>
+    </li>`);
       // Clear the input after new task is inserted
       $('input').val('');
 
@@ -82,7 +81,6 @@ $(document).ready(function() {
     if ($('input').val().replace(/^\s+|\s+$/g, "").length === 0) {
       $plusIcon.hide();
     }
-
   });
 
   /*

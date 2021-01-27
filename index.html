@@ -9,6 +9,9 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+  
   <title> my To-do list </title>
 
 </head>
@@ -20,7 +23,7 @@
       <div class="wrapper">
         
         <div class="input-wrapper">
-          <input type="text" placeholder=" Add New Task">
+          <input type="text" placeholder=" Add a new task here...">
         </div>
       
         <div id="plus" class="plus-wrapper">
@@ -31,32 +34,33 @@
 
       <ol spellcheck="false">
         <li>
-          <span class="task"> Wash dog </span>
-          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"> </i> </span>
-          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
-          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"> </i> </span>
+          <span class="task"> Wash the dog </span>
+          <span class="trash"   contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg">      </i></span>
+          <span class="edit"    contenteditable="false" title="Click to edit this task">                 <i class="fas fa-pencil-alt fa-lg"> </i></span>
+          <span class="checked" contenteditable="false" title="Click to mark this task as completed">    <i class="far fa-square fa-lg">     </i></span>
         </li>
 
         <li>
           <span class="task"> Shopping </span>
-          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"></i> </span>
-          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
-          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"></i> </span>
+          <span class="trash"   contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg">      </i></span>
+          <span class="edit"    contenteditable="false" title="Click to edit this task">                 <i class="fas fa-pencil-alt fa-lg"> </i></span>
+          <span class="checked" contenteditable="false" title="Click to mark this task as completed">    <i class="far fa-square fa-lg">     </i></span>
         </li>
 
         <li>
-          <span class="task"> Feed cat </span>
-          <span class="trash" contenteditable="false"> <i class="fas fa-trash fa-lg"></i> </span>
-          <span class="edit" contenteditable="false"> <i class="fas fa-pencil-alt fa-lg"></i> </span>
-          <span class="checked" contenteditable="false"> <i class="far fa-square fa-lg"></i> </span>
+          <span class="task"> Feed the cat </span>
+          <span class="trash"   contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg">      </i></span>
+          <span class="edit"    contenteditable="false" title="Click to edit this task">                 <i class="fas fa-pencil-alt fa-lg"> </i></span>
+          <span class="checked" contenteditable="false" title="Click to mark this task as completed">    <i class="far fa-square fa-lg">     </i></span>
         </li>
       </ol>
     </div>
   </main>
 
   <footer>
-    <a href="https://github.com/verona-hub/to-do-list" target="_blank">
+    <a href="https://github.com/verona-hub/to-do-list" target="_blank" title="Github profile">
       <img class="github" src="img/icon-github.svg" alt="github icon">
+      <!--<p> Github profile </p>-->
     </a>
   </footer>
 
