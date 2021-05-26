@@ -14,7 +14,7 @@ $(document).ready(function() {
     let restOfLetters = todoText.slice(1, todoText.length);
     // Join the new sentence
     todoText = firstLetter + restOfLetters;
-
+    
     let $emptyInput = $('input').val().replace(/^\s+|\s+$/g, "");
 
     // If input is empty:
