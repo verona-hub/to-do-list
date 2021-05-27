@@ -41,9 +41,10 @@ h1 {
 }
 
 .wrapper {
-  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
-  justify-content: space-between;
+  height: 60px;
 }
 
 .input-wrapper {
@@ -53,10 +54,10 @@ h1 {
 input {
   background-color: rgb(251, 215, 134);
   border: 3px solid rgba(0, 0, 0, 0);
-  display: inline-block;
   font-size: 1.2rem;
-  height: 7vh;
-  padding: 10px 20px;
+  padding: 10px 0;
+  height: 100%;
+  text-indent: 20px;
   width: 100%;
 }
 
@@ -67,12 +68,15 @@ input:focus {
 }
 
 .plus-wrapper {
-  align-items: center;
   background-color: rgb(251, 215, 134);
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
-  flex-grow: 1;
+  -ms-align-items: center;
+  align-items: center;
   justify-content: center;
-  height: 7vh;
+  height: 100%;
+  width: 15%;
 }
 
 .fa-plus {
@@ -382,12 +386,12 @@ footer p {
   }
 
   .plus-wrapper {
-    height: 7vh;
-    padding: 0 20px;
+    /* height: 7vh;
+    padding: 0 20px; */
   }
 
   .fa-plus {
-    right: 1vw;
+    /* right: 1vw; */
   }
 
   span.task {
@@ -443,11 +447,11 @@ footer p {
   }
 
   .plus-wrapper {
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   .fa-plus {
-    right: 3vw;
+    /* right: 3vw; */
   }
 
   li {
@@ -462,10 +466,7 @@ footer p {
     margin-right: 3vw;
   }
 
-  footer {
-    position: relative;
-    top: 15vh;
-  }
+  
 }
 
 @media screen and (max-width: 1300px) and (orientation: portrait) {
@@ -475,27 +476,68 @@ footer p {
 
   footer {
     margin: 5vh 0;
+    padding-top: 100px;
   }
+  
 
   footer img {
     width: 10vw;
   }
 }
 
-@media screen and (max-width: 1300px) and (orientation: landscape) {}
 
-/*
- ██      ██████       ██████       ██████      ██████  ██   ██
-███     ██  ████     ██  ████     ██  ████     ██   ██  ██ ██
- ██     ██ ██ ██     ██ ██ ██     ██ ██ ██     ██████    ███
- ██     ████  ██     ████  ██     ████  ██     ██       ██ ██
- ██      ██████       ██████       ██████      ██      ██   ██
-*/
+  /*
+   ██  ██  ██████   ██████      ██████  ██   ██
+  ███ ███ ██  ████ ██  ████     ██   ██  ██ ██
+   ██  ██ ██ ██ ██ ██ ██ ██     ██████    ███
+   ██  ██ ████  ██ ████  ██     ██       ██ ██
+   ██  ██  ██████   ██████      ██      ██   ██
+  */
+
+
 @media screen and (max-width: 1001px) {}
 
 @media screen and (max-width: 1001px) and (orientation: portrait) {}
 
-@media screen and (max-width: 1001px) and (orientation: landscape) {}
+@media screen and (max-width: 1100px) and (orientation: landscape) {
+  .container {
+    margin: 10vw;
+    min-width: 70vw;
+  }
+  
+  h1 {
+    padding: 5vh;
+  }
+  
+  input {
+    font-size: 1.4rem;
+    /* padding: 30px; */
+  }
+  
+  .plus-wrapper {
+    /* padding: 10px; */
+  }
+  
+  .fa-plus {
+    /* right: 0; */
+  }
+  
+  li {
+    font-size: 1rem;
+    height: 70px;
+    line-height: 70px;
+  }
+  
+  footer {
+    position: relative;
+    top: 0;
+  }
+  
+  footer img {
+    width: 7vw;
+    width: 50px;
+  }
+}
 
 @media screen and (max-height: 700px) and (max-width: 1000px) and (orientation: landscape) {}
 
@@ -509,11 +551,11 @@ footer p {
 @media screen and (max-width: 740px) {
   input {
     font-size: 1rem;
-    height: 9vh;
+    /* height: 9vh; */
   }
 
   .plus-wrapper {
-    height: 9vh;
+    /* height: 9vh; */
   }
 }
 
@@ -522,33 +564,24 @@ footer p {
     font-size: 1.4rem;
     padding: 8vw;
   }
-
+  
   li {
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 10vh;
     line-height: 10vh;
   }
 }
 
 @media screen and (max-width: 740px) and (orientation: landscape) {
-  h1 {
-    font-size: 2.4rem;
-    padding: 2vw;
-  }
-
-  input {
-    font-size: 2rem;
-    padding: 30px;
-  }
-
-  li {
-    height: 20vh;
-    line-height: 20vh;
-  }
-
-  footer img {
-    width: 7vw;
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 /*
@@ -559,9 +592,13 @@ footer p {
      ██      █████       ██████      ██      ██   ██
 */
 @media screen and (max-width: 480px) {
+  .container {
+    min-width: 85vw;
+    margin: 10vh 0 0;
+  }
   footer {
     position: relative;
-    top: 5vh;
+    bottom: 2vh;
   }
 }
 
