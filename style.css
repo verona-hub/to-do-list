@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+:root {
+  --yellow: rgb(251, 215, 134);
+}
+
 html,
 body {
   min-height: 100vh;
@@ -16,6 +20,16 @@ body {
   flex-direction: column;
   font-family: 'Comfortaa', cursive;
   justify-content: space-evenly;
+}
+
+main {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 input {
@@ -52,7 +66,7 @@ h1 {
 }
 
 input {
-  background-color: rgb(251, 215, 134);
+  background-color: var(--yellow);
   border: 3px solid rgba(0, 0, 0, 0);
   font-size: 1.2rem;
   padding: 10px 0;
@@ -68,7 +82,7 @@ input:focus {
 }
 
 .plus-wrapper {
-  background-color: rgb(251, 215, 134);
+  background-color: var(--yellow);
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -117,6 +131,13 @@ span {
 
 li {
   overflow: hidden;
+}
+
+.docs_wrapper {
+  background-color: #22c1c3;
+  margin-top: 50px;
+  max-width: 700px;
+  text-align: center;
 }
 
 /*
@@ -177,11 +198,11 @@ i.fa-trash:hover {
 }
 
 .green {
-  color: green;
+  color: #008000;
 }
 
 .orange {
-  color: orange !important;
+  color: #FFA500 !important;
 }
 
 /*
@@ -193,15 +214,6 @@ i.fa-trash:hover {
 */
 
 footer {
-  /* -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; */
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -209,9 +221,6 @@ footer {
   align-content: center;
   align-items: center;
   width: 100%;
-}
-
-footer a {
 }
 
 footer img {
@@ -385,15 +394,6 @@ footer p {
     min-width: 460px;
   }
 
-  .plus-wrapper {
-    /* height: 7vh;
-    padding: 0 20px; */
-  }
-
-  .fa-plus {
-    /* right: 1vw; */
-  }
-
   span.task {
     padding-right: 2vw;
   }
@@ -421,10 +421,6 @@ footer p {
   }
 }
 
-@media screen and (min-width: 1301px) and (orientation: portrait) {}
-
-@media screen and (min-width: 1301px) and (orientation: landscape) {}
-
 /*
  ██     ██████       ██████       ██████      ██████  ██   ██
 ███          ██     ██  ████     ██  ████     ██   ██  ██ ██
@@ -446,14 +442,6 @@ footer p {
     font-size: 1.6rem;
   }
 
-  .plus-wrapper {
-    /* padding: 20px; */
-  }
-
-  .fa-plus {
-    /* right: 3vw; */
-  }
-
   li {
     font-size: 1.4rem;
     height: 7vh;
@@ -466,7 +454,6 @@ footer p {
     margin-right: 3vw;
   }
 
-  
 }
 
 @media screen and (max-width: 1300px) and (orientation: portrait) {
@@ -484,7 +471,11 @@ footer p {
     width: 10vw;
   }
 }
-
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+  .container {
+    min-width: 50vw;
+  }
+}
 
   /*
    ██  ██  ██████   ██████      ██████  ██   ██
@@ -493,11 +484,6 @@ footer p {
    ██  ██ ████  ██ ████  ██     ██       ██ ██
    ██  ██  ██████   ██████      ██      ██   ██
   */
-
-
-@media screen and (max-width: 1001px) {}
-
-@media screen and (max-width: 1001px) and (orientation: portrait) {}
 
 @media screen and (max-width: 1100px) and (orientation: landscape) {
   .container {
@@ -511,15 +497,6 @@ footer p {
   
   input {
     font-size: 1.4rem;
-    /* padding: 30px; */
-  }
-  
-  .plus-wrapper {
-    /* padding: 10px; */
-  }
-  
-  .fa-plus {
-    /* right: 0; */
   }
   
   li {
@@ -551,11 +528,6 @@ footer p {
 @media screen and (max-width: 740px) {
   input {
     font-size: 1rem;
-    /* height: 9vh; */
-  }
-
-  .plus-wrapper {
-    /* height: 9vh; */
   }
 }
 
@@ -570,18 +542,6 @@ footer p {
     height: 10vh;
     line-height: 10vh;
   }
-}
-
-@media screen and (max-width: 740px) and (orientation: landscape) {
-  
-  
-  
-  
-  
-  
-  
-  
-  
 }
 
 /*
@@ -601,12 +561,3 @@ footer p {
     bottom: 2vh;
   }
 }
-
-/*
-██████      ███████      ██████      ██████  ██   ██
-     ██          ██     ██  ████     ██   ██  ██ ██
- █████          ██      ██ ██ ██     ██████    ███
-     ██        ██       ████  ██     ██       ██ ██
-██████         ██        ██████      ██      ██   ██
-*/
-@media screen and (max-width: 370px) {}
