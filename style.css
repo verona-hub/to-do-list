@@ -5,6 +5,8 @@
 }
 
 :root {
+  --salmon: rgb(247, 121, 125);
+  --whitesmoke: rgb(230, 244, 241);
   --yellow: rgb(251, 215, 134);
 }
 
@@ -26,25 +28,22 @@ main {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  flex-direction: column;
   align-content: center;
   -ms-align-items: center;
   align-items: center;
-}
-
-input {
-  font-family: 'Comfortaa', cursive;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .container {
   border-radius: 8px;
-  box-shadow: 16px 16px 23px grey;
+  box-shadow: 16px 16px 23px #808080;
   overflow: hidden;
 }
 
 h1 {
-  background-color: #f7797d;
-  color: white;
+  background-color: var(--salmon);
+  color: rgb(255, 255, 255);
   cursor: default;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 2.2rem;
@@ -52,6 +51,10 @@ h1 {
   padding: 30px;
   text-align: center;
   text-transform: uppercase;
+}
+
+input {
+  font-family: 'Comfortaa', cursive;
 }
 
 .wrapper {
@@ -105,7 +108,7 @@ ol {
 }
 
 li {
-  background-color: #E6F4F1;
+  background-color: var(--whitesmoke);
   cursor: default;
   display: block;
   font-size: 20px;
@@ -134,10 +137,37 @@ li {
 }
 
 .docs_wrapper {
-  background-color: #22c1c3;
-  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  margin-top: 5vh;
   max-width: 700px;
   text-align: center;
+}
+
+.docs_wrapper h1 {
+  border-radius: 8px 8px 0 0;
+  font-size: 1.8rem;
+  padding: 15px;
+}
+
+.docs_wrapper h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.docs_text {
+  background-color: rgb(217, 237, 237);
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.docs_text:nth-child(2n) {
+  background-color: var(--whitesmoke);
+}
+
+.docs_text p {
+  padding: 5px;
 }
 
 /*
@@ -212,7 +242,6 @@ i.fa-trash:hover {
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 */
-
 footer {
   display: -webkit-flex;
   display: -ms-flex;
@@ -220,7 +249,12 @@ footer {
   justify-content: center;
   align-content: center;
   align-items: center;
+  margin: 5vh 0 2vh;
   width: 100%;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 footer img {
@@ -390,7 +424,7 @@ footer p {
 */
 @media screen and (min-width: 1301px) {
   .container {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     min-width: 460px;
   }
 
@@ -413,11 +447,11 @@ footer p {
   }
 
   span.trash:hover {
-    color: #f7797d;
+    color: var(--salmon);
   }
-
+  
   footer {
-    margin: 10vh 0 2vh;
+    margin: 10vh 0 0;
   }
 }
 
@@ -429,8 +463,12 @@ footer p {
  ██     ██████       ██████       ██████      ██      ██   ██
 */
 @media screen and (max-width: 1300px) {
+  main {
+    flex-direction: column;
+  }
   .container {
-    margin: 0 10vw;
+    /* margin: 0 10vw; */
+    /* margin: 10vh 0 5vh; */
   }
 
   h1 {
@@ -454,6 +492,9 @@ footer p {
     margin-right: 3vw;
   }
 
+  footer img {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 1300px) and (orientation: portrait) {
@@ -461,62 +502,64 @@ footer p {
     min-width: 60vw;
   }
 
-  footer {
-    margin: 5vh 0;
-    padding-top: 100px;
+  .docs_wrapper {
+    max-width: 60vw;
   }
-  
 
-  footer img {
-    width: 10vw;
+  footer {
+    /* padding-top: 100px; */
   }
 }
+
 @media screen and (max-width: 1300px) and (orientation: landscape) {
   .container {
     min-width: 50vw;
   }
+
+  .docs_wrapper {
+    max-width: 50vw;
+  }
+
+  footer {
+    margin: 10vh 0 2vh;
+  }
 }
 
-  /*
+/*
    ██  ██  ██████   ██████      ██████  ██   ██
   ███ ███ ██  ████ ██  ████     ██   ██  ██ ██
    ██  ██ ██ ██ ██ ██ ██ ██     ██████    ███
    ██  ██ ████  ██ ████  ██     ██       ██ ██
    ██  ██  ██████   ██████      ██      ██   ██
   */
-
 @media screen and (max-width: 1100px) and (orientation: landscape) {
   .container {
-    margin: 10vw;
     min-width: 70vw;
   }
-  
+
+  .docs_wrapper {
+    max-width: 70vw;
+  }
+
   h1 {
     padding: 5vh;
   }
-  
+
   input {
     font-size: 1.4rem;
   }
-  
+
   li {
     font-size: 1rem;
     height: 70px;
     line-height: 70px;
   }
-  
+
   footer {
-    position: relative;
-    top: 0;
-  }
-  
-  footer img {
-    width: 7vw;
-    width: 50px;
+    /* position: relative;
+    top: 0; */
   }
 }
-
-@media screen and (max-height: 700px) and (max-width: 1000px) and (orientation: landscape) {}
 
 /*
   ███████ ██   ██  ██████      ██████  ██   ██
@@ -536,7 +579,7 @@ footer p {
     font-size: 1.4rem;
     padding: 8vw;
   }
-  
+
   li {
     font-size: 0.8rem;
     height: 10vh;
@@ -556,6 +599,11 @@ footer p {
     min-width: 85vw;
     margin: 10vh 0 0;
   }
+
+  .docs_wrapper {
+    max-width: 85vw;
+  }
+
   footer {
     position: relative;
     bottom: 2vh;
