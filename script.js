@@ -14,7 +14,7 @@ $(document).ready(function() {
     let restOfLetters = todoText.slice(1, todoText.length);
     // Join the new sentence
     todoText = firstLetter + restOfLetters;
-    
+
     let $emptyInput = $('input').val().replace(/^\s+|\s+$/g, "");
 
     // If input is empty:
@@ -65,7 +65,7 @@ $(document).ready(function() {
   ██  ██████  ██████  ██   ████
   */
 
-  let $plusIcon = $('.fa-plus');
+  let $plusIcon = $('#fa-plus');
 
   // Hide the (+) icon as default
   $plusIcon.hide();
@@ -169,7 +169,7 @@ $(document).ready(function() {
   $('ol').on('click', 'span.trash', function(event) {
 
     // Fadeout effect before removal
-    $(this).parent().fadeTo(1000, 0.05).fadeOut(10, function() {
+    $(this).parent().fadeTo(1000, 0.05).fadeOut(250, function() {
 
       // After the fadeout, the task is removed
       $(this).remove();

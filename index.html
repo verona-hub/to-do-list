@@ -27,61 +27,53 @@
         </div>
 
         <div id="plus" class="plus-wrapper">
-          <i class="fas fa-plus fa-lg"></i>
+          <i id="fa-plus" class="fas fa-plus fa-lg"></i>
         </div>
       </div>
 
 
       <ol spellcheck="false">
-        <li>
-          <span class="task"> Wash the dog </span>
-          <span class="trash" contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg"> </i></span>
-          <span class="edit" contenteditable="false" title="Click to edit this task"> <i class="fas fa-pencil-alt fa-lg"> </i></span>
-          <span class="checked" contenteditable="false" title="Click to mark this task as completed"> <i class="far fa-square fa-lg"> </i></span>
-        </li>
-
-        <li>
-          <span class="task"> Shopping </span>
-          <span class="trash" contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg"> </i></span>
-          <span class="edit" contenteditable="false" title="Click to edit this task"> <i class="fas fa-pencil-alt fa-lg"> </i></span>
-          <span class="checked" contenteditable="false" title="Click to mark this task as completed"> <i class="far fa-square fa-lg"> </i></span>
-        </li>
-
-        <li>
-          <span class="task"> Feed the cat </span>
-          <span class="trash" contenteditable="false" title="Click to remove this task from the list"> <i class="fas fa-trash fa-lg"> </i></span>
-          <span class="edit" contenteditable="false" title="Click to edit this task"> <i class="fas fa-pencil-alt fa-lg"> </i></span>
-          <span class="checked" contenteditable="false" title="Click to mark this task as completed"> <i class="far fa-square fa-lg"> </i></span>
-        </li>
       </ol>
+
     </div>
 
     <div class="docs_wrapper">
       <h1> How to use </h1>
 
       <div class="docs_text">
-        <h3> Add a task </h3>
+        <div>
+          <h3> Add a task </h3>
+        </div>
         <p> Click inside the yellow box and add text. </p>
-        <p> Once done, press Enter or click on the + button. </p>
+        <p> Once done, press Enter or click on the <i class="fas fa-plus fa-lg"></i> button. </p>
       </div>
 
       <div class="docs_text">
-        <h3> Complete a task </h3>
-        <p> Hover over the task and click the square box. </p>
+        <div>
+          <h3> Complete a task </h3>
+        </div>
+        <p class="inline"> Hover over the task and click the square box. <i class="far fa-square fa-lg"></i> </p>
       </div>
 
       <div class="docs_text">
-        <h3> Edit a task </h3>
-        <p> Hover over the task and click the pencil icon. </p>
+        <div>
+          <h3> Edit a task </h3>
+        </div>
+        <p class="inline"> Hover over the task and click the pencil icon. <i class="fas fa-pencil-alt fa-lg"> </i> </p>
         <p> You can now edit the task. </p>
         <p> Once done, press Enter or click on the pencil icon again. </p>
+        <p> A completed task cannot be edited! </p>
+        <p> In order to do so, un-click the square box first. </p>
       </div>
-      
+
       <div class="docs_text">
-        <h3> Remove a task </h3>
-        <p> Hover over the task and click the recycle bin. </p>
+        <div>
+          <h3> Remove a task </h3>
+        </div>
+        <p class="inline"> Hover over the task and click the recycle bin. <i class="fas fa-trash fa-lg"></i> </p>
+        
       </div>
-      
+
     </div>
   </main>
 
