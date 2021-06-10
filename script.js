@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   /// Main funtion to add a task to the list
   const addTask = () => {
-
     // The input text is taken and trimmed to remove whitespace
     let todoText = $('input').val().trim();
     // Take the first task letter and make it Uppercase
@@ -31,23 +30,20 @@ $(document).ready(function() {
       // Clear the input after a new task is submitted
       $('input').val('');
     }
-    
+
     // End of addTask function
   };
 
-  // Add the task to the list when (+) button is pressed while input is not empty
-  $('.wrapper').on('click', '#plus', addTask);
-
   // Add the task to the list when keyboard ENTER is pressed while input is not empty
-  const addToTaskListKeypress = event => {
+  const addToTaskOnKeypress = event => {
     event.keyCode === 13 && addTask();
-  }
+  };
 
   // Add the task to the list if the focus goes outside of the input and the keyboard ENTER is pressed
-  $(document, 'input').on('keydown', addToTaskListKeypress);
+  $(document, 'input').on('keydown', addToTaskOnKeypress);
 
-  // Clear the input if the page is refreshed
-  $("input").val('');
+  // Clear the input when the page is refreshed
+  $('input').val('');
 
   /*
   ██████  ██      ██    ██ ███████
@@ -64,14 +60,25 @@ $(document).ready(function() {
   ██  ██████  ██████  ██   ████
   */
 
-  let $plusIcon = $('#fa-plus');
+  // Add the task to the list when (+) button is pressed while input is not empty
+  $('.wrapper').on('click', '#plus', addTask);
 
+  let $plusIcon = $('#fa-plus');
   // Hide the (+) icon as default
   $plusIcon.hide();
 
-  // Show the (+) icon if: input is pressed and input is empty
+  // Show the (+) icon if: input is pressed and input is not empty
+  $('.wrapper').on('keypress', 'input', () => {
+    // Leave >= 0
+    $('input').val().length >= 0 && $plusIcon.show();
+  });
+
+  // Plus icon background color has to match input and input:focus
   $('.wrapper').on('focus', 'input', () => {
-    $plusIcon.show();
+    $('#plus').css("background-color", "rgb(247, 233, 192)");
+  });
+  $('.wrapper').on('focusout', 'input', () => {
+    $('#plus').css("background-color", "rgb(251, 215, 134)");
   });
 
   // Hide the (+) icon when a click happens outside of an empty input
@@ -124,8 +131,8 @@ $(document).ready(function() {
       }
     }
 
-    // Function to finish editing the task
-    function stopEditTask() {
+    // Stop editing function
+    const stopEditTask = () => {
       $(this).closest('li').prop('contenteditable', false);
       $(this).closest('li').find('span.edit').removeClass('orange');
     };
@@ -133,9 +140,7 @@ $(document).ready(function() {
     // If ENTER is pressed during edit, the edit stops
     $('ol').on('keypress', 'li', event => {
       if (event.keyCode === 13) {
-        $(this).closest('li').prop('contenteditable', false);
-        // As the edit finishes, the orange color is removed
-        $(this).closest('li').find('span.edit').removeClass('orange');
+        stopEditTask();
       }
     });
 
@@ -145,9 +150,7 @@ $(document).ready(function() {
     // Editception = when the edit button is clicked again during edit, the edit stops
     $('li').on('click', 'span.edit', () => {
       if ($(this).closest('li').prop('contenteditable') == 'true') {
-        $(this).closest('li').prop('contenteditable', false);
-        $(this).closest('li').find('span.edit').removeClass('orange');
-
+        stopEditTask();
         return false;
       }
     });

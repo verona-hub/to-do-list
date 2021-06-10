@@ -5,9 +5,20 @@
 }
 
 :root {
-  --salmon: rgb(247, 121, 125);
   --acqua: rgb(230, 244, 241);
+  --cyan_dark: rgb(34, 193, 195);
+  --cyan_light: rgb(217, 237, 237);
+  --green: rgb(0, 128, 0);
+  --grey: rgb(84, 76, 75);
+  --grey_cyan: rgb(182, 190, 190);
+  --grey_light: rgb(128, 128, 128);
+  --lime_light: rgb(236, 247, 209);
+  --orange: rgb(255, 165, 0);
+  --salmon: rgb(247, 121, 125);
+  --salmon_light: rgb(242, 154, 157);
+  --white: rgb(255, 255, 255);
   --yellow: rgb(251, 215, 134);
+  --yellow_light: rgb(247, 233, 192);
 }
 
 html,
@@ -17,7 +28,7 @@ body {
 
 body {
   align-items: center;
-  background: linear-gradient(to bottom, #22c1c3 5%, #ecf7d1 100%);
+  background: linear-gradient(to bottom, var(--cyan_dark) 5%, var(--lime_light) 100%);
   display: flex;
   flex-direction: column;
   font-family: 'Comfortaa', cursive;
@@ -37,14 +48,14 @@ main {
 
 .container {
   border-radius: 8px;
-  box-shadow: 16px 16px 23px #808080;
+  box-shadow: 16px 16px 23px var(--grey_light);
   margin: 80px 0 40px;
   overflow: hidden;
 }
 
 h1 {
   background-color: var(--salmon);
-  color: rgb(255, 255, 255);
+  color: var(--white);
   cursor: default;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 2.2rem;
@@ -71,7 +82,7 @@ input {
 
 input {
   background-color: var(--yellow);
-  border: 3px solid rgba(0, 0, 0, 0);
+  border: 2px solid rgba(0, 0, 0, 0);
   font-size: 1.2rem;
   padding: 10px 0;
   height: 100%;
@@ -80,13 +91,14 @@ input {
 }
 
 input:focus {
-  background-color: #f7e9c0;
-  border: 3px solid rgb(53, 131, 236);
+  background-color: var(--yellow_light);
+  overflow: hidden;
+  padding: 10px 0;
   outline: none;
 }
 
 ol {
-  background-color: #f29a9d;
+  background-color: var(--salmon_light);
   list-style-position: inside;
   list-style-type: decimal;
   min-width: 30vw;
@@ -109,7 +121,7 @@ li span:focus {
 }
 
 li:nth-child(2n) {
-  background-color: rgb(217, 237, 237);
+  background-color: var(--cyan_light);
 }
 
 span {
@@ -145,7 +157,7 @@ li {
 }
 
 .docs_text {
-  background-color: rgb(217, 237, 237);
+  background-color: var(--cyan_light);
   font-size: 1rem;
   padding: 5px;
 }
@@ -197,7 +209,7 @@ li {
 .container span.checked,
 .container span.edit,
 .container span.trash {
-  color: rgb(84, 76, 75);
+  color: var(--grey);
   cursor: pointer;
   float: right;
   text-align: center;
@@ -236,16 +248,16 @@ li {
 }
 
 .completed {
-  color: rgb(182, 190, 190);
+  color: var(--grey_cyan);
   text-decoration: line-through;
 }
 
 .green {
-  color: #008000;
+  color: var(--green);
 }
 
 .orange {
-  color: #FFA500 !important;
+  color: var(--orange) !important;
 }
 
 .docs_text .fa-square,
@@ -477,11 +489,6 @@ footer p {
   .docs_wrapper {
     width: 33%;
   }
-
-  footer {
-    /* margin: 5vh 0 0; */
-    /* margin: 80px 0 0; */
-  }
 }
 
 /*
@@ -494,10 +501,6 @@ footer p {
 @media screen and (max-width: 1300px) {
   main {
     flex-direction: column;
-  }
-
-  .container {
-    /* margin: 0 10vw; */
   }
 
   h1 {
@@ -535,9 +538,6 @@ footer p {
     max-width: 60vw;
   }
 
-  footer {
-    /* padding-top: 100px; */
-  }
 }
 
 @media screen and (max-width: 1300px) and (orientation: landscape) {
@@ -584,10 +584,6 @@ footer p {
     line-height: 70px;
   }
 
-  footer {
-    /* position: relative;
-    top: 0; */
-  }
 }
 
 /*
